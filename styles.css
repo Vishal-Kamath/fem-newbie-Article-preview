@@ -62,12 +62,14 @@ body {
   border: 0;
   border-radius: 1rem;
   overflow: hidden;
+  line-height: 0;
 }
 
 .image-container,
 .image-container img {
-  width: var(--container-width);
+  width: var(--image-container-width);
   height: var(--image-container-height);
+  line-height: 0;
   object-fit: cover;
   object-position: 0 -1.5rem;
   line-height: 0;
@@ -78,6 +80,8 @@ body {
   height: var(--content-container-height);
 
   padding: var(--content-container-padding);
+  padding-top: 3rem;
+  padding-bottom: 0;
 }
 
 .header {
@@ -141,9 +145,41 @@ body {
 
   background-color: var(--clr-lg-gray-blue);
   width: 3rem;
+  height: 3rem;
   aspect-ratio: 1;
 }
 
+@media (min-width: 50rem) {
+  :root {
+    --container-width: 73rem;
+    --container-height: 28rem;
+
+    --image-container-width: 28.5rem;
+    --image-container-height: var(--container-height);
+
+    --content-container-width: 44.5rem;
+    --content-container-height: var(--container-height);
+    --content-container-padding: 4rem;
+
+    --fs-header: 2rem;
+    --fs-para: 1.3rem;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+
+  .image-container,
+  .image-container img {
+    object-fit: cover;
+    object-position: 0;
+  }
+
+  .para {
+    max-width: 100ch;
+    padding-bottom: 1rem;
+  }
+}
 
 
 
