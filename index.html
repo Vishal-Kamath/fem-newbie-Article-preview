@@ -34,7 +34,7 @@
           to help you make any room feel complete.
         </div>
       </div>
-      <div class="details">
+      <div class="details" id="details">
         <div class="profile">
           <img src="images/avatar-michelle.jpg" alt="">
           <div class="flex">
@@ -42,20 +42,26 @@
             <span>28 Jun 2020</span>
           </div>
         </div>
-        <div class="links" style="display: none;">
-          SHARE
+        <div class="links-container">
+          <div class="links" id="links">
+            <span>SHARE</span>
+            <img src="images/icon-facebook.svg" alt="facebook">
+            <img src="images/icon-twitter.svg" alt="twitter">
+            <img src="images/icon-pinterest.svg" alt="pinterest">
+          </div>
+          <button class="button" onclick="showLinks()">
+            <img src="images/icon-share.svg" alt="">
+          </button>
         </div>
-        <button class="button">
-          <img src="images/icon-share.svg" alt="">
-        </button>
-      </div>
+    </div>
     </div>
   </div>
-
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/Vishal-Kamath" target="_blank">Vishal Kamath</a>.
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
